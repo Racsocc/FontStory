@@ -78,5 +78,3 @@ chmod -R 777 database fonts logs
 - 声明变更：必须明确声明对原项目的修改
 
 违反上述条款的行为将构成侵权。
-
-© 2025 FontStory. All rights reserved.
