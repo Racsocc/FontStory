@@ -1,0 +1,312 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+    padding: 2rem;
+    padding-bottom: 4rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+.header {
+    padding-bottom: 1rem;
+}
+
+.text-input-container {
+    margin-bottom: 2rem;
+}
+
+.text-input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    transition: border-color 0.2s ease;
+}
+
+.text-input:focus {
+    outline: none;
+    border-color: #333;
+}
+
+.font-size-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.control-buttons,
+.theme-controls {
+    display: flex;
+    gap: 0;
+}
+
+.size-btn {
+    padding: 4px 16px;
+    border: 1px solid #e0e0e0;
+    background: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 14px;
+    margin: 0;
+    position: relative;
+}
+
+.size-btn:first-child {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.size-btn:last-child {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.size-btn:not(:last-child) {
+    border-right: none;
+}
+
+.size-btn:hover {
+    background: #f5f5f5;
+}
+
+.size-btn.active {
+    background: #333;
+    color: white;
+    border-color: #333;
+    z-index: 1;
+}
+
+/* 深色主题下的按钮样式 */
+:root[data-theme="dark"] .size-btn {
+    background: #2d2d2d;
+    border-color: #404040;
+    color: #fff;
+}
+
+:root[data-theme="dark"] .size-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* 深色主题下的深色按钮默认和激活状态 */
+:root[data-theme="dark"] .size-btn[data-theme="dark"],
+:root[data-theme="dark"] .size-btn.active {
+    background: #fff;
+    color: #1a1a1a;
+    border-color: #fff;
+    z-index: 1;
+}
+
+/* 深色主题下的深色按钮默认状态 - 确保优先级 */
+:root[data-theme="dark"] .size-btn[data-theme="dark"] {
+    background: #fff !important;
+    color: #1a1a1a !important;
+    border-color: #fff !important;
+}
+
+/* 深色主题下的深色按钮悬停状态 */
+:root[data-theme="dark"] .size-btn[data-theme="dark"]:hover,
+:root[data-theme="dark"] .size-btn.active:hover {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+:root[data-theme="dark"] .text-input {
+    background: #2d2d2d;
+    border-color: #404040;
+    color: #fff;
+}
+
+:root[data-theme="dark"] .text-input:focus {
+    border-color: #fff;
+}
+
+/* 浅色主题样式 */
+:root[data-theme="light"] .size-btn {
+    background: white;
+    border-color: #e0e0e0;
+    color: #333;
+}
+
+:root[data-theme="light"] .size-btn:hover {
+    background: #f5f5f5;
+}
+
+:root[data-theme="light"] .size-btn.active {
+    background: #333 !important;
+    color: white !important;
+    border-color: #333 !important;
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
+    .font-demo {
+        padding: 1rem;
+    }
+}
+
+.font-demo {
+    margin-bottom: 0;
+    padding: 2rem 2rem 0.5rem 2rem;
+    border-bottom: 1px solid #eee;
+    border-radius: 4px;
+    position: relative;
+}
+
+.font-demo:hover {
+    background: rgb(243 243 243);
+}
+
+.font-info {
+    font-size: 0.875rem;
+    color: #9c9c9c;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.font-download-link {
+    color: #9c9c9c;
+    text-decoration: none;
+    font-size: 0.875rem;
+    margin-left: auto;
+}
+
+.font-download-link:hover {
+    text-decoration: underline;
+}
+
+.font-sample {
+    margin: 1rem 0;
+    line-height: 1.8;
+    min-height: 2em;
+}
+
+/* 字体大小类 */
+.text-small {
+    font-size: 1rem;
+}
+
+.text-medium {
+    font-size: 1.25rem;
+}
+
+.text-large {
+    font-size: 1.5rem;
+}
+
+.text-xlarge {
+    font-size: 2rem;
+}
+
+.text-jumbo {
+    font-size: 2.5rem;
+}
+
+/* 深色主题下的字体展示样式 */
+:root[data-theme="dark"] .font-demo {
+    border-color: #404040;
+}
+
+:root[data-theme="dark"] .font-demo:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+:root[data-theme="dark"] .font-info {
+    color: #9c9c9c;
+}
+
+:root[data-theme="dark"] .font-download-link {
+    color: #9c9c9c;
+}
+
+/* 深色主题下的样式 */
+:root[data-theme="dark"] {
+    color-scheme: dark;
+}
+
+:root[data-theme="dark"] body {
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+:root[data-theme="dark"] .container {
+    background-color: #2d2d2d;
+}
+
+/* 深色主题下的字体预览样式 */
+:root[data-theme="dark"] .font-sample {
+    color: #fff;
+}
+
+:root[data-theme="light"] .font-sample {
+    color: #333;
+}
+
+/* 页脚样式 */
+footer {
+    text-align: center;
+    padding: 1rem 2rem;
+    background: white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+footer nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.875rem;
+    color: #999;
+}
+
+footer a {
+    color: #666;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #333;
+}
+
+:root[data-theme="dark"] footer {
+    background: #2d2d2d;
+}
+
+:root[data-theme="dark"] footer,
+:root[data-theme="dark"] footer a {
+    color: #9c9c9c;
+}
+
+:root[data-theme="dark"] footer a:hover {
+    color: #fff;
+}
