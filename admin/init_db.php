@@ -80,8 +80,8 @@ try {
         'favicon' => '/favicon.ico',
         'keywords' => '字体展示,字体预览,字体下载',
         'description' => 'FontStory 是一个字体展示和下载平台，提供商用字体下载。',
-        'copyright' => '© 2024 FontStory. All rights reserved.',
-        'footer_info' => 'admin@fontstory',
+        'copyright' => '© 2025 FontStory.',
+        'footer_info' => 'GitHub',
         'demo_text' => 'FontStory 字体展示平台'
     ];
 

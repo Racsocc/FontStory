@@ -147,10 +147,12 @@ $demo_text = $settings['demo_text'] ?? 'FontStory 字体展示平台';
     <footer>
         <nav>
             <div class="copyright">
-                <?= htmlspecialchars($settings['copyright'] ?? '© 2024 FontStory. All rights reserved.') ?>
+                <?= htmlspecialchars($settings['copyright'] ?? '© 2025 FontStory.') ?>
             </div>
             <div class="contact">
-                <?= htmlspecialchars($settings['footer_info'] ?? 'admin@fontstory') ?>
+                <a href="https://github.com/Racsocc/FontStory" target="_blank" style="color: inherit; text-decoration: none;">
+                    <?= htmlspecialchars($settings['footer_info'] ?? 'Github') ?>
+                </a>
             </div>
         </nav>
     </footer>

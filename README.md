@@ -1,12 +1,15 @@
 # FontStory
 一个字体展示和管理平台，支持字体在线预览、分包上传、后台管理等功能。
+
+## 界面预览
+![](ui_screenshots/1_FontStory.png)
 ![](ui_screenshots/2_FontStory.png)
 ![](ui_screenshots/3_FontStory.png)
 ![](ui_screenshots/4_FontStory.png)
 ![](ui_screenshots/5_FontStory.png)
 ![](ui_screenshots/6_FontStory.png)
-![](ui_screenshots/1_FontStory.png)
 ![](ui_screenshots/7_FontStory.png)
+
 ## 特性
 - 🎨 支持字体在线预览和动态调整大小
 - 📱 响应式设计，完美适配移动端

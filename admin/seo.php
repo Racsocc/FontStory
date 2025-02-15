@@ -87,7 +87,7 @@ try {
         <label for="copyright">页脚版权信息</label>
         <input type="text" id="copyright" name="copyright" 
                value="<?= htmlspecialchars($settings['copyright'] ?? '') ?>">
-        <small>例如：© 2024 FontStory. All rights reserved.</small>
+        <small>例如：© 2024 FontStory.</small>
     </div>
     
     <div class="form-group">
