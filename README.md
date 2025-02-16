@@ -75,6 +75,8 @@ chmod -R 777 database fonts logs
 2. 特别感谢：樵夫 提供字体分包项目线索；
 3. 本项目全程使用Cursor IDE开发，项目中90%代码由的 claude-3.5-sonnet 编写，虽然花了钱，如果没有AI工具的辅助，我想以现在的能力，我可能需要耗费很多时间成本才能完成。而在AI的辅助下，这个项目总开发时长仅用了2天。
 
+![](ui_screenshots/Support.png)
+
 ## 许可证
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
