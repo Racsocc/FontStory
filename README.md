@@ -2,6 +2,8 @@
 一个字体展示和管理平台，支持字体在线预览、分包上传、后台管理等功能。
 
 ## 界面预览
+
+![](ui_screenshots/ui.png)
 ![](ui_screenshots/1_FontStory.png)
 ![](ui_screenshots/2_FontStory.png)
 ![](ui_screenshots/3_FontStory.png)
