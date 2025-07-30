@@ -44,7 +44,7 @@ chmod -R 777 database fonts logs
 ```
 
 3. 初始化数据库
-- 访问 admin/init_db.php 进行初始化、
+- 访问 admin/init_db.php 进行初始化
 
 4. 登录后台
 - 地址：admin/login.php
@@ -75,7 +75,7 @@ chmod -R 777 database fonts logs
 1. 字体分包工具：[chinese-font.netlify.app](https://chinese-font.netlify.app/zh-cn/online-split/) ，本项目字体分包功能依赖此工具实现；
   
 2. 特别感谢：樵夫 提供字体分包项目线索；
-3. 本项目全程使用Cursor IDE开发，项目中90%代码由的 claude-3.5-sonnet 编写，虽然花了钱，如果没有AI工具的辅助，我想以现在的能力，我可能需要耗费很多时间成本才能完成。而在AI的辅助下，这个项目总开发时长仅用了2天。
+3. 本项目全程使用Cursor IDE开发，项目中90%代码由 claude-3.5-sonnet 编写，虽然花了钱，如果没有AI工具的辅助，我想以现在的能力，我可能需要耗费很多时间成本才能完成。而在AI的辅助下，这个项目总开发时长仅用了2天。
 
 ![](ui_screenshots/Support.png)
 
