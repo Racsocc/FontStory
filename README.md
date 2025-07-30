@@ -82,7 +82,7 @@ chmod -R 777 database fonts logs
 ## 许可证
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
-本项目采用 GNU General Public License v3.0 (GPL-3.0) 开源许可证:
+本项目采用 GNU General Public License v3.0 (GPL-3.0) 开源许可证：
 
 - 禁止闭源：任何基于本项目的衍生作品必须以相同的许可证开源
 - 保留署名：必须保留原作者署名和版权信息
