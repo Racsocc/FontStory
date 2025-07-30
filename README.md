@@ -43,50 +43,41 @@ chmod -R 777 database fonts logs
 ```
 
 3. 初始化数据库
-- 访问 admin/init_db.php 进行初始化
+- 访问 admin/init_db.php 进行初始化、
 
 4. 登录后台
 - 地址：admin/login.php
-- 默认账号：fontstory
-- 默认密码：fontstory
+- 默认账号：admin
+- 默认密码：admin123
 
+5. 上传字体文件
+- 支持 .ttf, .otf, .woff, .woff2 格式
+- 建议文件大小不超过 10MB
 
-> ⚠️ **重要安全提示**：
-> 
-> 🔒 **1. 初始化完成后，请立即删除或重命名 init_db.php 文件，**
->    **以防止数据库被他人重复初始化**
-> 
-> 🔑 **2. 登录后台后，请立即修改默认密码**
+## 使用说明
 
-5. 点击字体上传，填写字体信息，上传分包字体zip，发布即可。
+### 字体管理
+- 支持批量上传字体文件
+- 自动生成字体预览
+- 支持字体分类管理
+- 支持字体搜索功能
 
-### 常见问题
-1. 文件上传失败
-- 检查 PHP upload_max_filesize
-- 检查 Nginx client_max_body_size
+### 主题切换
+- 支持深色/浅色主题
+- 主题设置自动保存
+- 响应系统主题偏好
 
-2. 数据库错误
-- 确保 database/ 目录可写
-- 检查 SQLite 扩展是否启用
+### 性能优化
+- 字体文件分包加载
+- 图片懒加载
+- CSS/JS 压缩
+- 浏览器缓存优化
 
-## 感谢名单
-
-1. 字体分包工具：[chinese-font.netlify.app](https://chinese-font.netlify.app/zh-cn/online-split/) ，本项目字体分包功能依赖此工具实现；
-  
-2. 特别感谢：樵夫 提供字体分包项目线索；
-3. 本项目全程使用Cursor IDE开发，项目中90%代码由 claude-3.5-sonnet 编写，虽然花了钱，如果没有AI工具的辅助，我想以现在的能力，我可能需要耗费很多时间成本才能完成。而在AI的辅助下，这个项目总开发时长仅用了2天。
-
-![](ui_screenshots/Support.png)
+## 技术栈
+- **前端**：HTML5, CSS3, JavaScript (ES6+)
+- **后端**：PHP 7.4+
+- **数据库**：SQLite 3
+- **服务器**：Nginx/Apache
 
 ## 许可证
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-
-本项目采用 GNU General Public License v3.0 (GPL-3.0) 开源许可证：
-
-- 禁止闭源：任何基于本项目的衍生作品必须以相同的许可证开源
-- 保留署名：必须保留原作者署名和版权信息
-- 非商业用途：仅供个人学习和非商业用途使用
-- 传染性：修改或使用本项目代码的新项目必须同样采用 GPL-3.0 许可证
-- 声明变更：必须明确声明对原项目的修改
-
-违反上述条款的行为将构成侵权。
+MIT License
