@@ -3,7 +3,6 @@
 
 ## 界面预览
 
-![](ui_screenshots/ui.png)
 ![](ui_screenshots/1_FontStory.png)
 ![](ui_screenshots/2_FontStory.png)
 ![](ui_screenshots/3_FontStory.png)
