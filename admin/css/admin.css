@@ -1,0 +1,862 @@
+/* 页面标题 */
+h1 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* 深色主题下的标题样式 */
+@media (prefers-color-scheme: dark) {
+    h1 {
+        color: #fff;
+    }
+}
+
+/* 基础样式继承自前端 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+    padding: 0;
+}
+
+/* 后台布局 */
+.admin-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.admin-sidebar {
+    width: 250px;
+    background: #2d2d2d;
+    color: #fff;
+    padding: 1rem;
+}
+
+.sidebar-header {
+    padding: 1rem 0;
+    border-bottom: 1px solid #404040;
+    margin-bottom: 1rem;
+}
+
+.sidebar-header a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 2.2rem;
+    font-weight: 500;
+}
+
+.sidebar-header a:hover {
+    opacity: 0.9;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.nav-item {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+    transition: all 0.2s;
+    font-size: 0.875rem;
+}
+
+.nav-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.nav-item.active {
+    background: rgba(255, 255, 255, 0.1);
+    font-weight: 500;
+}
+
+.nav-item.active:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.admin-content {
+    flex: 1;
+    padding: 1.5rem;
+    background: #f5f5f5;
+}
+
+.login-container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.login-form input {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.login-form button {
+    padding: 0.75rem;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.login-form button:hover {
+    background: #444;
+}
+
+.dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.stat-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card h3 {
+    margin: 0;
+    color: #666;
+    font-size: 0.875rem;
+}
+
+.stat-card p {
+    margin: 0.5rem 0 0;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* 表格样式 */
+.admin-table {
+    width: 100%;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.admin-table th,
+.admin-table td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    font-size: 0.875rem;
+}
+
+.admin-table th {
+    font-weight: 500;
+    color: #666;
+}
+
+.admin-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* 状态标签 */
+.status-badge {
+    display: inline-block;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.875rem;
+}
+
+.status-badge.active {
+    background: #e6f4ea;
+    color: #1e7e34;
+}
+
+.status-badge.inactive {
+    background: #feeced;
+    color: #dc3545;
+}
+
+/* 操作按钮 */
+.action-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.btn-action {
+    padding: 0.25rem 0.5rem;
+    color: #666;
+    border: 1px solid #ddd;
+    background: white;
+}
+
+.btn-action:hover {
+    background: #f5f5f5;
+    color: #333;
+}
+
+/* 表单样式 */
+.admin-form {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #000000;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-top: 1.6rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #666;
+}
+
+.form-group small {
+    display: block;
+    margin-top: 0.25rem;
+    color: #666;
+    font-size: 0.875rem;
+}
+
+/* 表单说明链接样式 */
+.form-group small a {
+    color: #666;
+    text-decoration: none;
+    border-bottom: 1px dashed #999;
+    transition: all 0.2s;
+}
+
+.form-group small a:hover {
+    color: #333;
+    border-bottom-style: solid;
+}
+
+/* 深色主题适配 */
+@media (prefers-color-scheme: dark) {
+    .form-group small a {
+        color: #9c9c9c;
+        border-bottom-color: #666;
+    }
+
+    .form-group small a:hover {
+        color: #fff;
+        border-bottom-color: #9c9c9c;
+    }
+}
+
+.form-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-action {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background: #2d2d2d;
+    color: white;
+    border: none;
+    height: 36px;
+    /* 固定按钮高度 */
+    line-height: 1;
+}
+
+.btn-primary:hover {
+    background: #404040;
+}
+
+.btn-secondary {
+    background: white;
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+.btn-secondary:hover {
+    background: #f5f5f5;
+}
+
+.btn-action {
+    padding: 0.25rem 0.5rem;
+    color: #666;
+    border: 1px solid #ddd;
+    background: white;
+}
+
+/* 提示消息 */
+.alert {
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+}
+
+.alert-success {
+    background: #e6f4ea;
+    color: #1e7e34;
+    border: 1px solid #c3e6cb;
+}
+
+.alert-error {
+    background: #feeced;
+    color: #dc3545;
+    border: 1px solid #f5c6cb;
+}
+
+/* 密码强度提示 */
+.password-strength {
+    margin-top: 0.25rem;
+    font-size: 0.875rem;
+}
+
+.password-strength.weak {
+    color: #dc3545;
+}
+
+.password-strength.medium {
+    color: #ffc107;
+}
+
+.password-strength.strong {
+    color: #28a745;
+}
+
+/* 在现有样式后添加 */
+
+.text-center {
+    text-align: center;
+}
+
+.form-link {
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+    color: #666;
+    text-decoration: none;
+}
+
+.form-link:hover {
+    text-decoration: underline;
+}
+
+/* 页面操作按钮 */
+.page-actions {
+    margin-bottom: 1.5rem;
+}
+
+/* 字体预览 */
+.font-preview {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    padding: 0.5rem 0;
+    color: #333;
+}
+
+/* 深色主题下的字体预览 */
+@media (prefers-color-scheme: dark) {
+    .font-preview {
+        color: #fff;
+    }
+}
+
+/* 链接样式 */
+.link {
+    color: #666;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.link:hover {
+    color: #333;
+}
+
+/* 危险按钮 */
+.btn-danger {
+    color: #dc3545;
+}
+
+.btn-danger:hover {
+    background: #dc3545;
+    color: white;
+    border-color: #dc3545;
+}
+
+/* 深色主题适配 */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #1a1a1a;
+        color: #fff;
+    }
+
+    .admin-content {
+        background: #1a1a1a;
+    }
+
+    .admin-table,
+    .admin-form {
+        background: #2d2d2d;
+        border-color: #404040;
+    }
+
+    .admin-table th,
+    .admin-table td {
+        border-color: #404040;
+    }
+
+    .btn-secondary,
+    .btn-action {
+        background: #2d2d2d;
+        border-color: #404040;
+        color: #fff;
+    }
+
+    .btn-secondary:hover,
+    .btn-action:hover {
+        background: #404040;
+    }
+
+    .form-group input {
+        background: #2d2d2d;
+        border-color: #404040;
+        color: #fff;
+    }
+
+    .form-group input:focus {
+        border-color: #fff;
+    }
+}
+
+/* 日志相关样式 */
+.log-filters {
+    margin-bottom: 1.5rem;
+}
+
+.filter-group {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.log-badge {
+    display: inline-block;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.log-badge.info {
+    background: #e3f2fd;
+    color: #1976d2;
+}
+
+.log-badge.warning {
+    background: #fff3e0;
+    color: #f57c00;
+}
+
+.log-badge.error {
+    background: #feeced;
+    color: #dc3545;
+}
+
+.log-badge.security {
+    background: #e8f5e9;
+    color: #388e3c;
+}
+
+.log-badge.font {
+    background: #e8eaf6;
+    color: #3f51b5;
+}
+
+/* 日志详情容器 */
+.details-container {
+    position: relative;
+    padding-right: 50px;
+    /* 为展开按钮留出空间 */
+}
+
+.log-details {
+    font-size: 0.75rem;
+    margin: 0;
+    white-space: pre-wrap;
+    max-height: 1.5em;
+    overflow: hidden;
+    position: relative;
+}
+
+/* 展开按钮样式 */
+.toggle-details {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 0.75rem;
+    color: #666;
+    border: none;
+    cursor: pointer;
+    padding: 2px 8px;
+    background: transparent;
+}
+
+/* 深色主题适配 */
+@media (prefers-color-scheme: dark) {
+    .toggle-details {
+        color: #9c9c9c;
+    }
+
+    .toggle-details:hover {
+        color: #fff;
+    }
+}
+
+.pagination {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.pagination-controls {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.per-page-controls {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.per-page-label {
+    font-size: 0.875rem;
+    color: #666;
+}
+
+/* 深色主题适配 */
+@media (prefers-color-scheme: dark) {
+    .per-page-label {
+        color: #9c9c9c;
+    }
+}
+
+.page-link {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    color: #666;
+    text-decoration: none;
+}
+
+.page-link.active {
+    background: #333;
+    color: white;
+    border-color: #333;
+}
+
+.type-filters {
+    display: flex;
+    gap: 0;
+}
+
+.type-btn {
+    padding: 0.35rem 0.75rem;
+    font-size: 0.875rem;
+    border: 1px solid #ddd;
+    background: white;
+    color: #666;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.type-btn:first-child {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.type-btn:last-of-type {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.type-btn:not(:last-of-type) {
+    border-right: none;
+}
+
+.type-btn:hover {
+    background: #f5f5f5;
+}
+
+.type-btn.active {
+    background: #333;
+    color: white;
+    border-color: #333;
+    z-index: 1;
+}
+
+/* 深色主题适配 */
+@media (prefers-color-scheme: dark) {
+    .type-btn {
+        background: #2d2d2d;
+        border-color: #404040;
+        color: #fff;
+    }
+
+    .type-btn:hover {
+        background: #404040;
+    }
+
+    .type-btn.active {
+        background: #fff;
+        color: #1a1a1a;
+        border-color: #fff;
+    }
+}
+
+/* 日期选择器样式 */
+.filter-group input[type="date"] {
+    padding: 0.35rem 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    color: #666;
+    background: white;
+    cursor: pointer;
+}
+
+/* 深色主题适配 */
+@media (prefers-color-scheme: dark) {
+    .filter-group input[type="date"] {
+        background: #2d2d2d;
+        border-color: #404040;
+        color: #fff;
+    }
+}
+
+/* 日志详情展开/收起 */
+.log-details-wrapper {
+    position: relative;
+}
+
+.log-details {
+    transition: max-height 0.3s ease;
+    overflow: hidden;
+}
+
+.log-details.expanded {
+    max-height: none !important;
+}
+
+.toggle-details {
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+    font-size: 0.75rem;
+    padding: 2px 8px;
+}
+
+/* 分页导航 */
+.page-ellipsis {
+    padding: 0.5rem;
+    color: #666;
+}
+
+.nav-btn {
+    font-weight: 500;
+}
+
+/* 日志搜索框 */
+.log-search {
+    padding: 0.35rem 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    width: 200px;
+    transition: all 0.2s;
+}
+
+.log-search:focus {
+    outline: none;
+    border-color: #666;
+    width: 300px;
+}
+
+@media (prefers-color-scheme: dark) {
+    .log-search {
+        background: #2d2d2d;
+        border-color: #404040;
+        color: #fff;
+    }
+
+    .log-search:focus {
+        border-color: #fff;
+    }
+
+    .page-ellipsis {
+        color: #9c9c9c;
+    }
+}
+
+/* 空状态提示 */
+.empty-state {
+    text-align: center;
+    padding: 3rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.empty-state p {
+    color: #666;
+    font-size: 0.875rem;
+}
+
+/* 深色主题适配 */
+@media (prefers-color-scheme: dark) {
+    .empty-state {
+        background: #2d2d2d;
+    }
+
+    .empty-state p {
+        color: #9c9c9c;
+    }
+}
+
+/* 日志统计信息 */
+.log-stats {
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+    color: #666;
+}
+
+.log-stats .separator {
+    margin: 0 0.5rem;
+    color: #ddd;
+}
+
+/* 深色主题适配 */
+@media (prefers-color-scheme: dark) {
+    .log-stats {
+        color: #9c9c9c;
+    }
+
+    .log-stats .separator {
+        color: #404040;
+    }
+}
+
+/* 类型筛选器中的分隔符 */
+.type-separator {
+    font-size: 0.75rem;
+    color: #666;
+    margin: 0 0.5rem;
+    align-self: center;
+}
+
+/* 深色主题适配 */
+@media (prefers-color-scheme: dark) {
+    .type-separator {
+        color: #9c9c9c;
+    }
+}
+
+.form-group textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    font-family: inherit;
+    transition: border-color 0.2s;
+    resize: vertical;
+    min-height: 80px;
+}
+
+.form-group textarea:focus {
+    outline: none;
+    border-color: #666;
+}
+
+/* 深色主题适配 */
+@media (prefers-color-scheme: dark) {
+    .form-group textarea {
+        background: #2d2d2d;
+        border-color: #404040;
+        color: #fff;
+    }
+
+    .form-group textarea:focus {
+        border-color: #fff;
+    }
+}
+
+/* 内联提示框样式 */
+.inline-alert {
+    margin: 0;
+    padding: 0.5rem 1.25rem;
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    height: 36px;
+    /* 与按钮高度一致 */
+}
+
+.inline-alert.alert-success {
+    background: #e6f4ea;
+    color: #1e7e34;
+    border: 1px solid #c3e6cb;
+}
