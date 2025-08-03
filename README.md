@@ -2,6 +2,7 @@
 一个字体展示和管理平台，支持字体在线预览、分包上传、后台管理等功能。
 
 ## 界面预览
+![](ui_screenshots/0_FontStory.png)
 ![](ui_screenshots/1_FontStory.png)
 ![](ui_screenshots/2_FontStory.png)
 ![](ui_screenshots/3_FontStory.png)
@@ -48,6 +49,9 @@ chmod -R 777 database fonts logs
 - 地址：admin/login.php
 - 默认账号：fontstory
 - 默认密码：fontstory
+5. 字体分包及上传
+- 将下载的字体包上传到字体分包工具：[chinese-font.netlify.app](https://chinese-font.netlify.app/zh-cn/online-split/)进行分包
+- 点击字体上传，填写字体信息，上传分包字体zip，发布即可。
 
 
 > ⚠️ **重要安全提示**：
@@ -57,7 +61,7 @@ chmod -R 777 database fonts logs
 > 
 > 🔑 **2. 登录后台后，请立即修改默认密码**
 
-5. 点击字体上传，填写字体信息，上传分包字体zip，发布即可。
+
 
 ### 常见问题
 1. 文件上传失败
@@ -68,12 +72,11 @@ chmod -R 777 database fonts logs
 - 确保 database/ 目录可写
 - 检查 SQLite 扩展是否启用
 
-## 感谢名单
-
+## 鸣谢
 1. 字体分包工具：[chinese-font.netlify.app](https://chinese-font.netlify.app/zh-cn/online-split/) ，本项目字体分包功能依赖此工具实现；
   
 2. 特别感谢：樵夫 提供字体分包项目线索；
-3. 本项目全程使用Cursor IDE开发，项目中90%代码由的 claude-3.5-sonnet 编写，虽然花了钱，如果没有AI工具的辅助，我想以现在的能力，我可能需要耗费很多时间成本才能完成。而在AI的辅助下，这个项目总开发时长仅用了2天。
+3. 本项目全程使用Cursor开发，项目中90%代码由的 claude-3.5-sonnet 编写。
 
 ![](ui_screenshots/Support.png)
 
